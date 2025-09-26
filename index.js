@@ -15,12 +15,12 @@ export default {
     ];
 
     const url = new URL(request.url);
-    const host = url.hostname.replace(/^www\./, '').toLowerCase();
+    const host = url.hostname.toLowerCase().replace('www.', '');
     
     if (redirectDomains.includes(host)) {
       return Response.redirect(`https://${primaryDomain}${url.pathname}${url.search}`, 301);
     }
     
-    return fetch(request);
+    return new Response('Not a redirect domain');
   }
 }

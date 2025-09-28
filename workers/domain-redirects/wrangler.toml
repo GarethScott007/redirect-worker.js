@@ -1,4 +1,24 @@
-# Cloudflare Wrangler config for the "domain-redirects" worker
+# wrangler.toml — domain-redirects (Workers v3)
+
+# Must match the Worker name shown in Cloudflare dashboard
 name = "domain-redirects"
+
+# Entry file path is relative to THIS wrangler.toml
 main = "index.js"
+
+# Pick a recent date; this is fine
 compatibility_date = "2025-09-26"
+
+# Optional: keep logs visible in the dashboard
+[observability]
+  [observability.logs]
+  enabled = true
+
+# We’ll keep routes in the dashboard to avoid masking your app.
+# If you ever want to manage via code, uncomment and fill zone_name for each domain.
+# [[routes]]
+# pattern = "flypurpleflights.com/*"
+# zone_name = "flypurpleflights.com"
+# [[routes]]
+# pattern = "*.flypurpleflights.com/*"
+# zone_name = "flypurpleflights.com"

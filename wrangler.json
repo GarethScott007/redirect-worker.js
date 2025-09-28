@@ -3,11 +3,3 @@ name = "domain-redirects"
 main = "index.js"
 compatibility_date = "2025-09-26"
 
-# Keep routes managed in the Cloudflare Dashboard so you don't
-# accidentally attach this worker to the canonical domain.
-# (If you ever want to manage via config, uncomment and fill zone_name.)
-# routes = [
-#   { pattern = "flypurpleflights.com/*", zone_name = "flypurpleflights.com" },
-#   { pattern = "*.flypurpleflights.com/*", zone_name = "flypurpleflights.com" },
-#   # ...repeat for each NON-canonical domain only...
-# ]

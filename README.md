@@ -7,4 +7,4 @@ Canonicalizes all non-primary domains to https://purpleflight.com with 301 redir
 - Routes: attach ONLY on non-canonical domains in Cloudflare dashboard
   (e.g., `flypurpleflights.com/*`, `*.flypurpleflights.com/*`, etc.).
 - Do **not** attach routes for `purpleflight.com/*` or `*.pages.dev/*`.
-- Ensure the redirecting domains are orange-cloud proxied in DNS.
+- Ensure the redirecting domains are orange-cloud proxied in DNS. 

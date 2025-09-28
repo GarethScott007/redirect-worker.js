@@ -1,4 +1,0 @@
-# Cloudflare Wrangler config for the "domain-redirects" worker
-name = "domain-redirects"
-main = "index.js"
-compatibility_date = "2025-09-26"
